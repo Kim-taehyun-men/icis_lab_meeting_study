@@ -30,14 +30,14 @@ for i in range(0, int(play_time)):
 
   for n in range(1, int(case) + 1):  # 누가 승리했는지 카운팅
     win_count(n)
-
   # raw_data = {'col1' : count}
   # print(raw_data)
   df[i + 1] = count  #DataFrame에 결과 추가
-  print(df)
+df = df / int(play_time) * 100
 
+# print(df)
 #결과값 출력
-print("총 인원:", player_number, ", 총 횟수", play_time)
-for i in range(1, int(case) + 1):
-  print(i, "경우의 수", count[i], "승리")
+#print("총 인원:", player_number, ", 총 횟수", play_time)
+# for i in range(1, int(case) + 1):
+#   print(i, "경우의 수", (int(count[i])/int(play_time))*100, "%로 승리")
 df.to_excel('rps.xlsx')
