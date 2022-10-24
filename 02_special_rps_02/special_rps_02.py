@@ -24,8 +24,8 @@ for i in range(0, int(play_time)):
   player_rpc = []
   for j in range(0, int(player_number)):
     player_rpc.append(random.randrange(1, int(case) + 1))  #랜덤 경우의수 생성
-
-  print("//////////////", i + 1, "번쨰 가위 바위 보//////////////")
+  
+  # print("//////////////", i + 1, "번쨰 가위 바위 보//////////////")
   print("랜덤으로 생긴 경우의 수 ", player_rpc)
 
   for n in range(1, int(case) + 1):  # 누가 승리했는지 카운팅
@@ -38,6 +38,6 @@ df = df / int(play_time) * 100
 # print(df)
 #결과값 출력
 #print("총 인원:", player_number, ", 총 횟수", play_time)
-# for i in range(1, int(case) + 1):
-#   print(i, "경우의 수", (int(count[i])/int(play_time))*100, "%로 승리")
+for i in range(1, int(case) + 1):
+  print(i, "경우의 수", (int(count[i]) / int(play_time)) * 100, "%로 승리")
 df.to_excel('rps.xlsx')
